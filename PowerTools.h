@@ -6,7 +6,7 @@
 class Tools {
  public:
   Tools();
-  virtual ~Tools();
+  virtual ~Tools() = default;
   float cost;  
   float rate;
 };
@@ -14,97 +14,97 @@ class Tools {
 class Drill : public Tools {
  public:
   Drill();
-  virtual ~Drill();
+  virtual ~Drill() = default;
 };
 
 class LTDrill : public Drill {
  public:
   LTDrill();
-  ~LTDrill();
+  ~LTDrill() = default; 
 };
 
 class MTDrill : public Drill {
  public:
   MTDrill();
-  ~MTDrill();
+  ~MTDrill()= default;
 };
 
 class HTDrill : public Drill {
  public:
   HTDrill();
-  ~HTDrill();
+  ~HTDrill()= default;
 };
 
 class Saw : public Tools {
  public:
   Saw();
-  ~Saw();
+  ~Saw()= default;
 };
 
 class LTSaw : public Saw {
  public:
   LTSaw();
-  ~LTSaw();
+  ~LTSaw()= default;
 };
 
 class MTSaw : public Saw {
  public:
   MTSaw();
-  ~MTSaw();
+  ~MTSaw()= default;
 };
 
 class HTSaw : public Saw {
  public:
   HTSaw();
-  ~HTSaw();
+  ~HTSaw()= default;
 };
 
 class Sander : public Tools {
  public:
   Sander();
-  ~Sander();
+  ~Sander()= default;
 };
 
 class LTSander : public Sander {
  public:
   LTSander();
-  ~LTSander();
+  ~LTSander()= default;
 };
 
 class MTSander : public Sander {
  public:
   MTSander();
-  ~MTSander();
+  ~MTSander() = default;
 };
 
 class HTSander : public Sander {
  public:
   HTSander();
-  ~HTSander();
+  ~HTSander() = default; 
 };
 
 class Wrench : public Tools {
  public:
   Wrench();
-  ~Wrench();
+  ~Wrench() = default;
 };
 
 class LTWrench : public Wrench {
  public:
   LTWrench();
-  ~LTWrench();
+  ~LTWrench() = default;
 };
 
 class MTWrench : public Wrench {
  public:
   MTWrench();
-  ~MTWrench();
+  ~MTWrench() = default;
 };
 
 class HTWrench : public Wrench {
  public:
   HTWrench();
-  ~HTWrench();
+  ~HTWrench() = default;
 };
 
 class IFactory {
@@ -113,7 +113,7 @@ class IFactory {
   virtual Wrench* createWrench() = 0;
   virtual Sander* createSander() = 0;
   virtual Saw* createSaw() = 0;
-  virtual ~IFactory();
+  virtual ~IFactory() = default;
 };
 
 class LTFactory : public IFactory {
@@ -122,7 +122,7 @@ class LTFactory : public IFactory {
   Wrench* createWrench() override;
   Sander* createSander() override;
   Saw* createSaw() override;
-  ~LTFactory();
+  ~LTFactory() = default;
 };
 
 class MTFactory : public IFactory {
@@ -131,7 +131,7 @@ class MTFactory : public IFactory {
   Wrench* createWrench() override;
   Sander* createSander() override;
   Saw* createSaw() override;
-  ~MTFactory();
+  ~MTFactory() = default;
 };
 
 class HTFactory : public IFactory {
@@ -140,7 +140,7 @@ class HTFactory : public IFactory {
   Wrench* createWrench() override;
   Sander* createSander() override;
   Saw* createSaw() override;
-  ~HTFactory();
+  ~HTFactory() = default;
 };
 
 class Facade {

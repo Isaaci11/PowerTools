@@ -1,0 +1,7 @@
+# Ignore directories created by Visual Studio
+.vs/
+Debug/
+
+# Ignore executable files and object files
+*.exe
+*.o
